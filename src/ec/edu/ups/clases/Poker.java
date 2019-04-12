@@ -1,6 +1,8 @@
 package ec.edu.ups.clases;
 
-public final class Poker extends JuegosDeAzar{
+import ec.edu.ups.interfaz.Interfaz;
+
+public final class Poker extends JuegosDeAzar implements Interfaz{
 
     private int tipoFicha;
     private int numeroPuesto;
@@ -15,13 +17,14 @@ public final class Poker extends JuegosDeAzar{
         this.apuesta = apuesta;
     }
 
-    public Poker(int tipoFicha, int numeroPuesto, double apuesta, String mostrarJuegos, int numeroMesa, boolean fisico, String nombreDealer, String nombreJuego, int codigo, String nombre, String categorias, int numeroJugadores) {
-        super(numeroMesa, fisico, nombreDealer, nombreJuego, codigo, nombre, categorias, numeroJugadores);
+    public Poker(int tipoFicha, int numeroPuesto, double apuesta, String mostrarJuegos) {
         this.tipoFicha = tipoFicha;
         this.numeroPuesto = numeroPuesto;
         this.apuesta = apuesta;
         this.mostrarJuegos = mostrarJuegos;
     }
+
+
 
     public int getTipoFicha() {
         return tipoFicha;
@@ -57,11 +60,21 @@ public final class Poker extends JuegosDeAzar{
 
     @Override
     public String toString() {
-        return "\t\tPoker" + "\nTipo de Ficha: " + tipoFicha + "\nNumero de Puesto: " + numeroPuesto + "\nApuesta: " + apuesta + "\nMostrar Juegos: " + mostrarJuegos + '"';
+        return super.toString() + "\t\tPoker" + "\nTipo de Ficha: " + tipoFicha + "\nNumero de Puesto: " + numeroPuesto + "\nApuesta: " + apuesta + "\nMostrar Juegos: " + mostrarJuegos + '"';
     }
 
     @Override
     public void Reglas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void partidaInicio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void partidaTerminada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

@@ -58,7 +58,7 @@ public abstract class JuegosDigital extends Juegos {
 
     @Override
     public String toString() {
-        return "\t\tJuegos Digitales" + "Online: " + online + "\nDigital: " + digital + "\nPlataforma: " + plataforma + "\nGraficos: " + graficos + '"';
+        return super.toString() + "\t\tJuegos Digitales" + "Online: " + online + "\nDigital: " + digital + "\nPlataforma: " + plataforma + "\nGraficos: " + graficos + '"';
     }
     
     

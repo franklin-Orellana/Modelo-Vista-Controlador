@@ -1,5 +1,8 @@
 package ec.edu.ups.clases;
-public final class Bingo extends JuegosDeAzar {
+
+import ec.edu.ups.interfaz.Interfaz;
+
+public final class Bingo extends JuegosDeAzar implements Interfaz {
 
     private int numeroTabla;
     private int numeroBolas;
@@ -14,15 +17,13 @@ public final class Bingo extends JuegosDeAzar {
         this.numeroBolas = numeroBolas;
     }
 
-    public Bingo(int numeroTabla, int numeroBolas, String tipoPremio, boolean comprobarTabla, int numeroMesa, boolean fisico, String nombreDealer, String nombreJuego, int codigo, String nombre, String categorias, int numeroJugadores) {
-        super(numeroMesa, fisico, nombreDealer, nombreJuego, codigo, nombre, categorias, numeroJugadores);
+    public Bingo(int numeroTabla, int numeroBolas, String tipoPremio, boolean comprobarTabla) {
         this.numeroTabla = numeroTabla;
         this.numeroBolas = numeroBolas;
         this.tipoPremio = tipoPremio;
         this.comprobarTabla = comprobarTabla;
     }
 
-    
     public int getNumeroTabla() {
         return numeroTabla;
     }
@@ -58,11 +59,21 @@ public final class Bingo extends JuegosDeAzar {
     @Override
     public String toString() {
  
-        return "\t\tBingo" + "\nnumeroTabla: " + numeroTabla + "\nnumeroBolas: " + numeroBolas + "\ntipoPremio: " + tipoPremio + "\ncomprobarTabla: " + comprobarTabla + '"';
+        return super.toString() + "\t\tBingo" + "\nnumeroTabla: " + numeroTabla + "\nnumeroBolas: " + numeroBolas + "\ntipoPremio: " + tipoPremio + "\ncomprobarTabla: " + comprobarTabla + '"';
     }
 
     @Override
     public void Reglas() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void partidaInicio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void partidaTerminada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

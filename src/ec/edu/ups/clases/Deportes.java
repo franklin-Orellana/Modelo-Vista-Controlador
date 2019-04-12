@@ -1,5 +1,8 @@
 package ec.edu.ups.clases;
-public final class Deportes extends JuegosDigital {
+
+import ec.edu.ups.interfaz.Interfaz;
+
+public final class Deportes extends JuegosDigital implements Interfaz {
 
     private String nombreEquipo;
     private String tiempo;
@@ -14,14 +17,14 @@ public final class Deportes extends JuegosDigital {
         this.tiempo = tiempo;
     }
 
-    public Deportes(String nombreEquipo, String tiempo, boolean cambioJugador, boolean cambioTactica, boolean online, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
-        super(online, digital, plataforma, graficos, codigo, nombre, categorias, numeroJugadores);
+    public Deportes(String nombreEquipo, String tiempo, boolean cambioJugador, boolean cambioTactica) {
         this.nombreEquipo = nombreEquipo;
         this.tiempo = tiempo;
         this.cambioJugador = cambioJugador;
         this.cambioTactica = cambioTactica;
     }
 
+   
     
  
     public String getNombreEquipo() {
@@ -58,11 +61,21 @@ public final class Deportes extends JuegosDigital {
 
     @Override
     public String toString() {
-        return "\t\tDeportes" + "\nnombreEquipo: " + nombreEquipo + "\ntiempo: " + tiempo + "\ncambioJugador: " + cambioJugador + "\ncambioTactica: " + cambioTactica + '"';
+        return super.toString() + "\t\tDeportes" + "\nnombreEquipo: " + nombreEquipo + "\ntiempo: " + tiempo + "\ncambioJugador: " + cambioJugador + "\ncambioTactica: " + cambioTactica + '"';
     }
 
     @Override
     public void Multijugador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void partidaInicio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void partidaTerminada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

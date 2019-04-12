@@ -1,5 +1,8 @@
 package ec.edu.ups.clases;
-public final class Aventura extends JuegosDigital {
+
+import ec.edu.ups.interfaz.Interfaz;
+
+public final class Aventura extends JuegosDigital implements Interfaz {
 
     private String misiones;
     private String objetivos;
@@ -14,14 +17,13 @@ public final class Aventura extends JuegosDigital {
         this.objetivos = objetivos;
     }
 
-    public Aventura(String misiones, String objetivos, String logro, String mapa, boolean online, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
-        super(online, digital, plataforma, graficos, codigo, nombre, categorias, numeroJugadores);
+    public Aventura(String misiones, String objetivos, String logro, String mapa) {
         this.misiones = misiones;
         this.objetivos = objetivos;
         this.logro = logro;
         this.mapa = mapa;
     }
-  
+
     public String getMisiones() {
         return misiones;
     }
@@ -56,11 +58,21 @@ public final class Aventura extends JuegosDigital {
 
     @Override
     public String toString() {
-        return "\t\tAventura" + "\nmisiones=" + misiones + "\nobjetivos=" + objetivos + "\nlogro: " + logro + "\nmapa: " + mapa + '"';
+        return super.toString() + "\t\tAventura" + "\nmisiones=" + misiones + "\nobjetivos=" + objetivos + "\nlogro: " + logro + "\nmapa: " + mapa + '"';
     }
 
     @Override
     public void Multijugador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void partidaInicio() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void partidaTerminada() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
