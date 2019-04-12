@@ -1,6 +1,6 @@
 package ec.edu.ups.clases;
 
-public class Poker {
+public class Poker extends JuegosDeAzar{
 
     private int tipoFicha;
     private int numeroPuesto;

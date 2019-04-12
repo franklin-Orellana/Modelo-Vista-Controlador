@@ -1,5 +1,5 @@
 package ec.edu.ups.clases;
-public class JuegosDigital {
+public class JuegosDigital extends Juegos {
 
     private boolean online;
     private boolean digital;

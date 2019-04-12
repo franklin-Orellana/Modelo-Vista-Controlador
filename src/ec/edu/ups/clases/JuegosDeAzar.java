@@ -1,6 +1,6 @@
 package ec.edu.ups.clases;
 
-public class JuegosDeAzar {
+public class JuegosDeAzar extends Juegos {
 
     private int numeroMesa;
     private boolean fisico;

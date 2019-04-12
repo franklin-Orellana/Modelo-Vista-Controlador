@@ -1,5 +1,5 @@
 package ec.edu.ups.clases;
-public class Bingo {
+public class Bingo extends JuegosDeAzar {
 
     private int numeroTabla;
     private int numeroBolas;
