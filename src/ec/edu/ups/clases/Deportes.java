@@ -1,5 +1,5 @@
 package ec.edu.ups.clases;
-public class Deportes extends JuegosDigital {
+public final class Deportes extends JuegosDigital {
 
     private String nombreEquipo;
     private String tiempo;

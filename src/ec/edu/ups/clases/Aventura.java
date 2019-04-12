@@ -1,5 +1,5 @@
 package ec.edu.ups.clases;
-public class Aventura extends JuegosDigital {
+public final class Aventura extends JuegosDigital {
 
     private String misiones;
     private String objetivos;
