@@ -14,13 +14,14 @@ public class Aventura extends JuegosDigital {
         this.objetivos = objetivos;
     }
 
-    public Aventura(String misiones, String objetivos, String logro, String mapa) {
+    public Aventura(String misiones, String objetivos, String logro, String mapa, boolean online, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(online, digital, plataforma, graficos, codigo, nombre, categorias, numeroJugadores);
         this.misiones = misiones;
         this.objetivos = objetivos;
         this.logro = logro;
         this.mapa = mapa;
     }
-    
+  
     public String getMisiones() {
         return misiones;
     }

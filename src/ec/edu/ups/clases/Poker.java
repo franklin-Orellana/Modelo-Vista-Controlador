@@ -15,7 +15,8 @@ public class Poker extends JuegosDeAzar{
         this.apuesta = apuesta;
     }
 
-    public Poker(int tipoFicha, int numeroPuesto, double apuesta, String mostrarJuegos) {
+    public Poker(int tipoFicha, int numeroPuesto, double apuesta, String mostrarJuegos, int numeroMesa, boolean fisico, String nombreDealer, String nombreJuego, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(numeroMesa, fisico, nombreDealer, nombreJuego, codigo, nombre, categorias, numeroJugadores);
         this.tipoFicha = tipoFicha;
         this.numeroPuesto = numeroPuesto;
         this.apuesta = apuesta;

@@ -14,7 +14,8 @@ public class JuegosDigital extends Juegos {
         this.plataforma = plataforma;
     }
 
-    public JuegosDigital(boolean online, boolean digital, String plataforma, String graficos) {
+    public JuegosDigital(boolean online, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(codigo, nombre, categorias, numeroJugadores);
         this.online = online;
         this.digital = digital;
         this.plataforma = plataforma;

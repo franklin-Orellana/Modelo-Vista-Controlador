@@ -14,13 +14,16 @@ public class Deportes extends JuegosDigital {
         this.tiempo = tiempo;
     }
 
-    public Deportes(String nombreEquipo, String tiempo, boolean cambioJugador, boolean cambioTactica) {
+    public Deportes(String nombreEquipo, String tiempo, boolean cambioJugador, boolean cambioTactica, boolean online, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(online, digital, plataforma, graficos, codigo, nombre, categorias, numeroJugadores);
         this.nombreEquipo = nombreEquipo;
         this.tiempo = tiempo;
         this.cambioJugador = cambioJugador;
         this.cambioTactica = cambioTactica;
     }
+
     
+ 
     public String getNombreEquipo() {
         return nombreEquipo;
     }

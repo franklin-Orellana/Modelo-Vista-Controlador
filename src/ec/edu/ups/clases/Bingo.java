@@ -14,12 +14,14 @@ public class Bingo extends JuegosDeAzar {
         this.numeroBolas = numeroBolas;
     }
 
-    public Bingo(int numeroTabla, int numeroBolas, String tipoPremio, boolean comprobarTabla) {
+    public Bingo(int numeroTabla, int numeroBolas, String tipoPremio, boolean comprobarTabla, int numeroMesa, boolean fisico, String nombreDealer, String nombreJuego, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(numeroMesa, fisico, nombreDealer, nombreJuego, codigo, nombre, categorias, numeroJugadores);
         this.numeroTabla = numeroTabla;
         this.numeroBolas = numeroBolas;
         this.tipoPremio = tipoPremio;
         this.comprobarTabla = comprobarTabla;
     }
+
     
     public int getNumeroTabla() {
         return numeroTabla;

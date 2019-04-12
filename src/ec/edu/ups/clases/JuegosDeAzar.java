@@ -15,7 +15,8 @@ public class JuegosDeAzar extends Juegos {
         this.fisico = fisico;
     }
 
-    public JuegosDeAzar(int numeroMesa, boolean fisico, String nombreDealer, String nombreJuego) {
+    public JuegosDeAzar(int numeroMesa, boolean fisico, String nombreDealer, String nombreJuego, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(codigo, nombre, categorias, numeroJugadores);
         this.numeroMesa = numeroMesa;
         this.fisico = fisico;
         this.nombreDealer = nombreDealer;
