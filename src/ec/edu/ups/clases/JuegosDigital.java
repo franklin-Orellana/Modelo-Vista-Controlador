@@ -1,6 +1,8 @@
 package ec.edu.ups.clases;
-public class JuegosDigital extends Juegos {
+public abstract class JuegosDigital extends Juegos {
 
+    public abstract void Multijugador();
+    
     private boolean online;
     private boolean digital;
     private String plataforma;

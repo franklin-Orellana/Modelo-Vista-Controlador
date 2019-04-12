@@ -60,6 +60,11 @@ public class Deportes extends JuegosDigital {
     public String toString() {
         return "\t\tDeportes" + "\nnombreEquipo: " + nombreEquipo + "\ntiempo: " + tiempo + "\ncambioJugador: " + cambioJugador + "\ncambioTactica: " + cambioTactica + '"';
     }
+
+    @Override
+    public void Multijugador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     

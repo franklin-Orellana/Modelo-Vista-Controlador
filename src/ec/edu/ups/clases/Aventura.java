@@ -59,4 +59,9 @@ public class Aventura extends JuegosDigital {
         return "\t\tAventura" + "\nmisiones=" + misiones + "\nobjetivos=" + objetivos + "\nlogro: " + logro + "\nmapa: " + mapa + '"';
     }
 
+    @Override
+    public void Multijugador() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

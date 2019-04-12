@@ -1,6 +1,8 @@
 package ec.edu.ups.clases;
 
-public class JuegosDeAzar extends Juegos {
+public abstract class JuegosDeAzar extends Juegos {
+    
+    public abstract void Reglas ();
 
     private int numeroMesa;
     private boolean fisico;
