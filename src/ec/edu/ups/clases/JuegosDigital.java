@@ -1,20 +1,20 @@
 package ec.edu.ups.clases;
-public class JuegosDigitales {
+public class JuegosDigital {
 
     private boolean online;
     private boolean digital;
     private String plataforma;
     private String graficos;
 
-    public JuegosDigitales() {
+    public JuegosDigital() {
     }
 
-    public JuegosDigitales(boolean digital, String plataforma) {
+    public JuegosDigital(boolean digital, String plataforma) {
         this.digital = digital;
         this.plataforma = plataforma;
     }
 
-    public JuegosDigitales(boolean online, boolean digital, String plataforma, String graficos) {
+    public JuegosDigital(boolean online, boolean digital, String plataforma, String graficos) {
         this.online = online;
         this.digital = digital;
         this.plataforma = plataforma;
