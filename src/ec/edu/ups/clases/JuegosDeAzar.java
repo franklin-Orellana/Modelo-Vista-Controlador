@@ -1,9 +1,7 @@
 package ec.edu.ups.clases;
 
-public abstract class JuegosDeAzar extends Juegos {
+public abstract class JuegosDeAzar extends Juego {
     
-    public abstract void Reglas ();
-
     private int numeroMesa;
     private boolean fisico;
     private String nombreDealer;
@@ -56,10 +54,24 @@ public abstract class JuegosDeAzar extends Juegos {
     public void setNombreJuego(String nombreJuego) {
         this.nombreJuego = nombreJuego;
     }
+    
+    public void cambioMesa(){
+        
+    }
+    
+    public void cambiomodoJuego(){
+        
+    }
+    
+    public void cambionombreDealer(){
+        
+    }
 
+    public abstract void Reglas ();
+    
     @Override
     public String toString() {
-       return super.toString() + "\t\tJuegos De Azar" + "\nNumero de Mesa: " + numeroMesa + "\nFisico: " + fisico + "\nNombre del Dealer: " + nombreDealer + "\nNombre de Juego: " + nombreJuego + '"';
+       return super.toString() + "\n\t\tJuegos De Azar" + "\nNumero de Mesa: " + numeroMesa + "\nFisico: " + fisico + "\nNombre del Dealer: " + nombreDealer + "\nNombre de Juego: " + nombreJuego + '"';
     }
     
     

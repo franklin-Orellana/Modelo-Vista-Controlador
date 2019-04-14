@@ -1,9 +1,8 @@
 package ec.edu.ups.clases;
-public abstract class JuegosDigital extends Juegos {
 
-    public abstract void Multijugador();
-    
-    private boolean online;
+public abstract class JuegosDigital extends Juego {
+
+    private boolean modoOnline;
     private boolean digital;
     private String plataforma;
     private String graficos;
@@ -16,20 +15,20 @@ public abstract class JuegosDigital extends Juegos {
         this.plataforma = plataforma;
     }
 
-    public JuegosDigital(boolean online, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
+    public JuegosDigital(boolean modoOnline, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
         super(codigo, nombre, categorias, numeroJugadores);
-        this.online = online;
+        this.modoOnline = modoOnline;
         this.digital = digital;
         this.plataforma = plataforma;
         this.graficos = graficos;
     }
 
     public boolean isOnline() {
-        return online;
+        return modoOnline;
     }
 
-    public void setOnline(boolean online) {
-        this.online = online;
+    public void setmodoOnline(boolean online) {
+        this.modoOnline = online;
     }
 
     public boolean isDigital() {
@@ -56,10 +55,19 @@ public abstract class JuegosDigital extends Juegos {
         this.graficos = graficos;
     }
 
+    public void cambioPlataforma() {
+
+    }
+
+    public void cambiomodoOnline() {
+        
+    }
+
+    public abstract void Multijugador();
+
     @Override
     public String toString() {
-        return super.toString() + "\t\tJuegos Digitales" + "Online: " + online + "\nDigital: " + digital + "\nPlataforma: " + plataforma + "\nGraficos: " + graficos + '"';
+        return super.toString() + "\n\t\tJuegos Digitales" + "\nOnline: " + modoOnline + "\nDigital: " + digital + "\nPlataforma: " + plataforma + "\nGraficos: " + graficos + '"';
     }
-    
-    
+
 }

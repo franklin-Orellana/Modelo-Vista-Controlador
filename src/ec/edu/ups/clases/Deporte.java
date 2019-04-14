@@ -2,22 +2,23 @@ package ec.edu.ups.clases;
 
 import ec.edu.ups.interfaz.Interfaz;
 
-public final class Deportes extends JuegosDigital implements Interfaz {
+public final class Deporte extends JuegosDigital implements Interfaz {
 
     private String nombreEquipo;
     private String tiempo;
     private boolean cambioJugador;
     private boolean cambioTactica;
 
-    public Deportes() {
+    public Deporte() {
     }
 
-    public Deportes(String nombreEquipo, String tiempo) {
+    public Deporte(String nombreEquipo, String tiempo) {
         this.nombreEquipo = nombreEquipo;
         this.tiempo = tiempo;
     }
 
-    public Deportes(String nombreEquipo, String tiempo, boolean cambioJugador, boolean cambioTactica) {
+    public Deporte(String nombreEquipo, String tiempo, boolean cambioJugador, boolean cambioTactica, boolean modoOnline, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(modoOnline, digital, plataforma, graficos, codigo, nombre, categorias, numeroJugadores);
         this.nombreEquipo = nombreEquipo;
         this.tiempo = tiempo;
         this.cambioJugador = cambioJugador;
@@ -26,7 +27,6 @@ public final class Deportes extends JuegosDigital implements Interfaz {
 
    
     
- 
     public String getNombreEquipo() {
         return nombreEquipo;
     }
@@ -59,25 +59,39 @@ public final class Deportes extends JuegosDigital implements Interfaz {
         this.cambioTactica = cambioTactica;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + "\t\tDeportes" + "\nnombreEquipo: " + nombreEquipo + "\ntiempo: " + tiempo + "\ncambioJugador: " + cambioJugador + "\ncambioTactica: " + cambioTactica + '"';
+    public void cambiarnombreEquipo(){
+        
     }
-
+    
+    public void modificarTiempo(){
+        
+    }
+    
+    public void modificarTactica(){
+        
+    }
+    
     @Override
     public void Multijugador() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("El juego es multijugador y pueden jugar hasta "+this.getNumeroJugadores()+" jugadores");    
     }
 
     @Override
     public void partidaInicio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("La Partida a dado inicio " +this.getNombre());    
     }
 
     @Override
     public void partidaTerminada() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("La Partida a terminado "+ this.getNombre());    
     }
+    
+    @Override
+    public String toString() {
+        return super.toString() + "\n\t\tDeporte\n" + "\nNombre De Equipo: " + nombreEquipo + "\nTiempo De Juego: " + tiempo + "\nCambio De Jugador: " + cambioJugador + "\nCambio De Tactica: " + cambioTactica + '"';
+    }
+
+    
     
     
     

@@ -1,27 +1,54 @@
 
 package ec.edu.ups.clases;
+/**
+ * 
+ * Esta clase instancia los atributos, getters y setters, contructores y metodos de la clase abuelo
+ * 
+ * @author FranklinOrellan
+ * 
+ */
 
-public class Juegos {
+public class Juego {
+    
+    /**
+     * atributos de la clase Juegos
+     */
 
     private int codigo;
     private String nombre;
     private String categorias;
     private int numeroJugadores;
 
-    public Juegos() {
+    /**
+     * constructor vacio
+     */
+    public Juego() {
     }
+    
+    /**
+     * constructor con atributos nombre y codigo
+     * 
+     */
 
-    public Juegos(int codigo, String nombre) {
+    public Juego(int codigo, String nombre) {
         this.codigo = codigo;
         this.nombre = nombre;
     }
+    
+    /**
+     * constructor con todos los atributos de la clase Juegos
+     */
 
-    public Juegos(int codigo, String nombre, String categorias, int numeroJugadores) {
+    public Juego(int codigo, String nombre, String categorias, int numeroJugadores) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.categorias = categorias;
         this.numeroJugadores = numeroJugadores;
     }
+    
+    /**
+     * generacion de setters y getters
+     */
     
     public int getCodigo() {
         return codigo;
@@ -55,9 +82,21 @@ public class Juegos {
         this.numeroJugadores = numeroJugadores;
     }
 
+    public void partidaInicio(){
+        System.out.println(""+this.nombre);
+    }
+    
+    public void partidaTerminada(){
+        System.out.println(""+this.nombre);
+    }
+    
+    /**
+     * generacion de toString de la clase Juegos 
+     */
+    
     @Override
     public String toString() {
-        return "\t\tJuegos" + "\ncodigo: " + codigo + "\nnombre: " + nombre + "\ncategorias: " + categorias + "\nnumeroJugadores: " + numeroJugadores + '"';
+        return "n\t\tJuego" + "\nCodigo: " + codigo + "\nNombre: " + nombre + "\nCategorias: " + categorias + "\nNumero De Jugadores: " + numeroJugadores + '"';
     }
     
     

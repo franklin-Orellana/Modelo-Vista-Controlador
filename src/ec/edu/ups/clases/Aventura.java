@@ -17,12 +17,15 @@ public final class Aventura extends JuegosDigital implements Interfaz {
         this.objetivos = objetivos;
     }
 
-    public Aventura(String misiones, String objetivos, String logro, String mapa) {
+    public Aventura(String misiones, String objetivos, String logro, String mapa, boolean modoOnline, boolean digital, String plataforma, String graficos, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(modoOnline, digital, plataforma, graficos, codigo, nombre, categorias, numeroJugadores);
         this.misiones = misiones;
         this.objetivos = objetivos;
         this.logro = logro;
         this.mapa = mapa;
     }
+
+    
 
     public String getMisiones() {
         return misiones;
@@ -56,24 +59,38 @@ public final class Aventura extends JuegosDigital implements Interfaz {
         this.mapa = mapa;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + "\t\tAventura" + "\nmisiones=" + misiones + "\nobjetivos=" + objetivos + "\nlogro: " + logro + "\nmapa: " + mapa + '"';
+    public void guardarMisiones(){
+        
     }
-
+    
+    public void guardarMapa(){
+        
+    }
+    
+    public void guardarLogros(){
+        
+    }
+    
     @Override
     public void Multijugador() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("El juego es multijugador y pueden jugar hasta "+this.getNumeroJugadores()+" jugadores");    
     }
 
     @Override
     public void partidaInicio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Partida a dado inicio " +this.getNombre());    
     }
 
     @Override
     public void partidaTerminada() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("La Partida a terminado " +this.getNombre());    
     }
+    
+    @Override
+    public String toString() {
+        return super.toString() + "\nAventura" + "\nmisiones: " + misiones + "\nobjetivos: " + objetivos + "\nlogro: " + logro + "\nmapa: " + mapa + '"';
+    }
+
+    
 
 }

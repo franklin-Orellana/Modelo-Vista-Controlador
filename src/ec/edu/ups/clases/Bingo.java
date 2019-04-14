@@ -17,13 +17,15 @@ public final class Bingo extends JuegosDeAzar implements Interfaz {
         this.numeroBolas = numeroBolas;
     }
 
-    public Bingo(int numeroTabla, int numeroBolas, String tipoPremio, boolean comprobarTabla) {
+    public Bingo(int numeroTabla, int numeroBolas, String tipoPremio, boolean comprobarTabla, int numeroMesa, boolean fisico, String nombreDealer, String nombreJuego, int codigo, String nombre, String categorias, int numeroJugadores) {
+        super(numeroMesa, fisico, nombreDealer, nombreJuego, codigo, nombre, categorias, numeroJugadores);
         this.numeroTabla = numeroTabla;
         this.numeroBolas = numeroBolas;
         this.tipoPremio = tipoPremio;
         this.comprobarTabla = comprobarTabla;
     }
 
+    
     public int getNumeroTabla() {
         return numeroTabla;
     }
@@ -56,26 +58,37 @@ public final class Bingo extends JuegosDeAzar implements Interfaz {
         this.comprobarTabla = comprobarTabla;
     }
 
-    @Override
-    public String toString() {
- 
-        return super.toString() + "\t\tBingo" + "\nnumeroTabla: " + numeroTabla + "\nnumeroBolas: " + numeroBolas + "\ntipoPremio: " + tipoPremio + "\ncomprobarTabla: " + comprobarTabla + '"';
+    public void cambiarTabla(){
+        
     }
-
+    
+    public void cambiartipoPremio(){
+        
+    }
+    
+    public void modificarnumeroBolas(){
+        
+    }
+    
     @Override
     public void Reglas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("En el "+this.getNombre()+" no puede haber mas de dos fichas en el mismo casillero ");
     }
 
     @Override
     public void partidaInicio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Partida a dado inicio "+this.getNombre());
     }
 
     @Override
     public void partidaTerminada() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("La Partida a terminado "+this.getNombre());
     }
     
-    
+    @Override
+    public String toString() {
+        return super.toString() + "\n\t\tBingo" + "\nnumeroTabla: " + numeroTabla + "\nnumeroBolas: " + numeroBolas + "\ntipoPremio: " + tipoPremio + "\ncomprobarTabla: " + comprobarTabla + '"';
+    }
+
+
 }
