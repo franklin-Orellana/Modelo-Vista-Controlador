@@ -1,19 +1,19 @@
-
 package ec.edu.ups.clases;
+
 /**
- * 
- * Esta clase instancia los atributos, getters y setters, contructores y metodos de la clase abuelo
- * 
+ *
+ * Esta clase instancia los atributos, getters y setters, contructores y metodos
+ * de la clase abuelo
+ *
  * @author FranklinOrellan
- * 
+ *
  */
 
 public class Juego {
-    
+
     /**
      * atributos de la clase Juegos
      */
-
     private int codigo;
     private String nombre;
     private String categorias;
@@ -24,32 +24,28 @@ public class Juego {
      */
     public Juego() {
     }
-    
+
     /**
      * constructor con atributos nombre y codigo
-     * 
      */
-
     public Juego(int codigo, String nombre) {
         this.codigo = codigo;
         this.nombre = nombre;
     }
-    
+
     /**
      * constructor con todos los atributos de la clase Juegos
      */
-
     public Juego(int codigo, String nombre, String categorias, int numeroJugadores) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.categorias = categorias;
         this.numeroJugadores = numeroJugadores;
     }
-    
+
     /**
      * generacion de setters y getters
      */
-    
     public int getCodigo() {
         return codigo;
     }
@@ -82,22 +78,22 @@ public class Juego {
         this.numeroJugadores = numeroJugadores;
     }
 
-    public void partidaInicio(){
-        System.out.println(""+this.nombre);
+    // metodos clase abuelo
+
+    public void partidaInicio() {
+        System.out.println("" + this.nombre);
     }
-    
-    public void partidaTerminada(){
-        System.out.println(""+this.nombre);
+
+    public void partidaTerminada() {
+        System.out.println("" + this.nombre);
     }
-    
+
     /**
-     * generacion de toString de la clase Juegos 
+     * generacion de toString de la clase Juegos
      */
-    
     @Override
     public String toString() {
         return "n\t\tJuego" + "\nCodigo: " + codigo + "\nNombre: " + nombre + "\nCategorias: " + categorias + "\nNumero De Jugadores: " + numeroJugadores + '"';
     }
-    
-    
+
 }

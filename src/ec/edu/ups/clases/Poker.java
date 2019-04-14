@@ -1,21 +1,43 @@
 package ec.edu.ups.clases;
 
 import ec.edu.ups.interfaz.Interfaz;
-
+/**
+ * 
+ * Esta clase instancia los atributos, getters y setters, contructores y metodos de la clase hija
+ * 
+ * @author FranklinOrellan
+ * 
+ */
 public final class Poker extends JuegosDeAzar implements Interfaz{
+    
+    /**
+     * atributos de la clase Poker
+     */
 
     private int tipoFicha;
     private int numeroPuesto;
     private double apuesta;
     private String mostrarJuegos;
 
+    /**
+     * constructor vacio
+     */
+    
     public Poker() {
     }
+    
+    /**
+     * constructor con atributos numeroPuesto y apuesta
+     */
 
     public Poker(int numeroPuesto, double apuesta) {
         this.numeroPuesto = numeroPuesto;
         this.apuesta = apuesta;
     }
+    
+    /**
+     * constructor con todos los atributos de la clase poker y con los atributos de la clase padre
+     */
 
     public Poker(int tipoFicha, int numeroPuesto, double apuesta, String mostrarJuegos, int numeroMesa, boolean fisico, String nombreDealer, String nombreJuego, int codigo, String nombre, String categorias, int numeroJugadores) {
         super(numeroMesa, fisico, nombreDealer, nombreJuego, codigo, nombre, categorias, numeroJugadores);
@@ -25,6 +47,10 @@ public final class Poker extends JuegosDeAzar implements Interfaz{
         this.mostrarJuegos = mostrarJuegos;
     }
 
+    /**
+     * generacion de setters y getters
+     */
+    
     public int getTipoFicha() {
         return tipoFicha;
     }
@@ -57,6 +83,10 @@ public final class Poker extends JuegosDeAzar implements Interfaz{
         this.mostrarJuegos = mostrarJuegos;
     }
 
+    /**
+     * metodos de la clase poker 
+     */
+    
     public void cambiartipoFicha(){
         
     }
@@ -68,6 +98,10 @@ public final class Poker extends JuegosDeAzar implements Interfaz{
     public void cambiarnumeroPuesto(){
         
     }
+    
+    /**
+     * metodos abstracto implementadoaa la clase Poker
+     */
     
     @Override
     public void Reglas() {
@@ -83,6 +117,10 @@ public final class Poker extends JuegosDeAzar implements Interfaz{
     public void partidaTerminada() {
         System.out.println("La Partida a terminado "+this.getNombre());
     }
+    
+    /**
+     * generacion de toString de la clase poker
+     */
     
     @Override
     public String toString() {
