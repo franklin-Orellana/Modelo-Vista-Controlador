@@ -9,7 +9,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Scanner entrada = new Scanner(System.in);
+        
 
         int opcionMenuPrincipal = 0;
         int opcionMenuAventura = 0;
@@ -18,7 +18,7 @@ public class Principal {
         int opcionMenuPoker = 0;
 
         ControladorAventura controlAventura = new ControladorAventura();
-
+        Scanner aven = new Scanner(System.in);
         do {
             System.out.println("***MENU PRINCIPAL***");
             System.out.println("1.- CRUD AVENTURA");
@@ -28,7 +28,7 @@ public class Principal {
             System.out.println("5.- SALIR");
             System.out.println("SELECCIONE UNA OPCION");
 
-            opcionMenuPrincipal = entrada.nextInt();
+            opcionMenuPrincipal = aven.nextInt();
 
             switch (opcionMenuPrincipal) {
                 case 1:
@@ -41,22 +41,19 @@ public class Principal {
                         System.out.println("5.- Regresar Menu Principal");
                         System.out.println("SELECCIONE UNA OPCION");
 
-                        opcionMenuAventura = entrada.nextInt();
+                        opcionMenuAventura = aven.nextInt();
 
                         switch (opcionMenuAventura) {
                             case 1:
                                 //create
                                 //pide todos los datos por teclado
-                                Scanner aven = new Scanner(System.in);
                                 //instancia un objeto
-                                Aventura aventura = new Aventura();
+                                
                                 //llama al metodo create del controlador
-                                System.out.println("Ingrese Codigo: ");
-                                int codigo = aven.nextInt();
                                 System.out.println("Ingrese Nombre Juego: ");
-                                String nombre = aven.nextLine();
+                                String nombre = aven.next();
                                 System.out.println("Ingrese Categoria: ");
-                                String categoria = aven.nextLine();
+                                String categoria = aven.next();
                                 System.out.println("Numero de Jugadores: ");
                                 int numjuga = aven.nextInt();
                                 System.out.println("Modo Online");
@@ -64,17 +61,18 @@ public class Principal {
                                 System.out.println("Digital: ");
                                 boolean digital = aven.nextBoolean();
                                 System.out.println("Plataforms: ");
-                                String plataforma = aven.nextLine();
+                                String plataforma = aven.next();
                                 System.out.println("Graficos: ");
-                                String grafico = aven.nextLine();
+                                String grafico = aven.next();
                                 System.out.println("Mision: ");
-                                String mision = aven.nextLine();
+                                String mision = aven.next();
                                 System.out.println("Objetivos: ");
-                                String objetivo = aven.nextLine();
+                                String objetivo = aven.next();
                                 System.out.println("Logro: ");
-                                String logro = aven.nextLine();
+                                String logro = aven.next();
                                 System.out.println("Mapa: ");
-                                String mapa = aven.nextLine();
+                                String mapa = aven.next();
+                                Aventura aventura = new Aventura(mision, objetivo, logro, mapa, modoOnline, digital, plataforma, grafico, 0, nombre, categoria, numjuga);
                                 controlAventura.create(aventura);
                                 break;
 
@@ -84,7 +82,8 @@ public class Principal {
                                 //pide el codigo por teclado
                                 System.out.println("Ingrese el codigo de la Aventura");
                                 //llama al metodo read del controlador
-                                controlAventura.read(codigo);
+                                int codigo = aven.nextInt();
+                                System.out.println(controlAventura.read(codigo)); 
                                 //visualizo los datos del objeto
                                 System.out.println(codigo);
                                 break;
@@ -95,13 +94,12 @@ public class Principal {
                                 //pide todos los datos por teclado
                                 Scanner avent = new Scanner(System.in);
                                 //instancia un objeto
-                                Aventura aventur = new Aventura();
                                 System.out.println("Ingrese Codigo: ");
                                 int codig = avent.nextInt();
                                 System.out.println("Ingrese Nombre Juego: ");
-                                String nombr = avent.nextLine();
+                                String nombr = avent.next();
                                 System.out.println("Ingrese Categoria: ");
-                                String categori = avent.nextLine();
+                                String categori = avent.next();
                                 System.out.println("Numero de Jugadores: ");
                                 int numjug = avent.nextInt();
                                 System.out.println("Modo Online");
@@ -109,19 +107,20 @@ public class Principal {
                                 System.out.println("Digital: ");
                                 boolean digita = avent.nextBoolean();
                                 System.out.println("Plataforms: ");
-                                String plataform = avent.nextLine();
+                                String plataform = avent.next();
                                 System.out.println("Graficos: ");
-                                String grafic = avent.nextLine();
+                                String grafic = avent.next();
                                 System.out.println("Mision: ");
-                                String misio = avent.nextLine();
+                                String misio = avent.next();
                                 System.out.println("Objetivos: ");
-                                String objetiv = avent.nextLine();
+                                String objetiv = avent.next();
                                 System.out.println("Logro: ");
-                                String logr = avent.nextLine();
+                                String logr = avent.next();
                                 System.out.println("Mapa: ");
-                                String map = avent.nextLine();
+                                String map = avent.next();
                                 //llama al metodo update del controlador
-                                controlAventura.update(aventur);
+                                Aventura aventuraactualizada = new Aventura(misio, objetiv, logr, map, modoOnlin, digita, plataform, grafic, codig, nombr, categori, numjug);
+                                controlAventura.update(aventuraactualizada);
                                 break;
 
                             case 4:

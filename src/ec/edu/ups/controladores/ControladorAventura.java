@@ -7,13 +7,19 @@ import java.util.List;
 public class ControladorAventura {
 
     private List<Aventura> lista;
+    private int contador;
 
+    
     public ControladorAventura() {
         lista = new ArrayList<>();
+        contador=0;
     }
 
     public void create(Aventura objeto) {
+        contador++;
+        objeto.setCodigo(contador); 
         lista.add(objeto);
+        
     }
 
     public Aventura read(int codigo) {
