@@ -78,7 +78,7 @@ public class Principal {
 
                             case 2:
                                 //read
-                                System.out.println("Leer Aventura");
+                                System.out.println("\t\tLeer Aventura");
                                 //pide el codigo por teclado
                                 System.out.println("Ingrese el codigo de la Aventura");
                                 //llama al metodo read del controlador

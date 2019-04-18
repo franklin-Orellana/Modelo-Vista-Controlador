@@ -2,50 +2,51 @@ package ec.edu.ups.controladores;
 
 import ec.edu.ups.clases.Deporte;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ControladorDeporte {
 
-    private List<Deporte> lista;
-
+    private Set<Deporte> lista;
+    private int codigo;
+    
     public ControladorDeporte() {
-
-        lista = new ArrayList<>();
-
+        lista = new HashSet<>();
+        codigo=0;
+        
     }
-
-    public void create(Deporte objeto) {
+    
+    public void create(Deporte objeto){
+        codigo++;
+        objeto.setCodigo(codigo);
         lista.add(objeto);
+                
     }
-
-    public Deporte read(int codigo) {
+    
+    public Deporte read(Deporte objeto){
         for (Deporte deporte : lista) {
-            if (deporte.getCodigo() == codigo) {
+            if(deporte.getCodigo() == codigo){
                 return deporte;
             }
+            
         }
         return null;
     }
-
-    public void update(Deporte objeto) {
-        for (int i = 0; i < lista.size(); i++) {
-            Deporte elemento = lista.get(i);
-            if (elemento.getCodigo() == objeto.getCodigo()) {
-                lista.set(i, objeto);
-                break;
-
-            }
+    
+    public void update(Deporte objeto){
+        if(lista.contains(objeto)){
+            lista.remove(objeto);
+            lista.add(objeto);
         }
-
     }
-
-    public void delete(Deporte objeto) {
-        for (int i = 0; i < lista.size(); i++) {
-            Deporte elemento = lista.get(i);
-            if (elemento.getCodigo() == objeto.getCodigo()) {
-                lista.remove(i);
-                break;
+    
+    public void delete(int codigo){
+        for (Deporte deporte : lista) {
+            if(deporte.getCodigo() == codigo){
+                lista.remove(deporte);
             }
+            
         }
     }
 }
