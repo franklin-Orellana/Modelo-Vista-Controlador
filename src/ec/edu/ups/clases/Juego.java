@@ -1,5 +1,7 @@
 package ec.edu.ups.clases;
 
+import ec.edu.ups.prueba.Prueba;
+
 /**
  *
  * Esta clase instancia los atributos, getters y setters, contructores y metodos
@@ -9,7 +11,7 @@ package ec.edu.ups.clases;
  *
  */
 
-public class Juego {
+public class Juego implements Comparable<Aventura>{
 
     /**
      * atributos de la clase Juegos
@@ -118,5 +120,17 @@ public class Juego {
         return true;
     }
 
-    
+    @Override
+    public int compareTo(Aventura o) {//comparar 
+        if(nombre.compareTo(o.getNombre()) >= 1){
+            return 1;
+            
+        }else if(nombre.compareTo(o.getNombre()) <= -1){
+            return -1;
+            
+        }else{
+            
+            return 0;
+        }
+    }    
 }

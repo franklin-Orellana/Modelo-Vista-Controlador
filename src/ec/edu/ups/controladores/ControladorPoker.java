@@ -2,29 +2,30 @@
 package ec.edu.ups.controladores;
 
 import ec.edu.ups.clases.Poker;
-import java.util.HashSet;
 import java.util.Set;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 public class ControladorPoker {
 
-    private Set<Poker> lista;
+    private SortedSet<Poker> listaOrdenada;
     private int codigo;
 
     public ControladorPoker() {
     
-        lista = new HashSet<>();
-        codigo = 0;
+        listaOrdenada = new TreeSet<>();
+        codigo = 1;
     
     }
 
     public void create(Poker objeto){
         codigo ++;
         objeto.setCodigo(codigo);
-        lista.add(objeto);
+        listaOrdenada.add(objeto);
     }
     
-    public Poker read(Poker objeto){
-        for (Poker poker : lista) {
+    public Poker read(int codigo){
+        for (Poker poker : listaOrdenada) {
             if(poker.getCodigo() == codigo){
                 return poker;
             }
@@ -33,18 +34,30 @@ public class ControladorPoker {
     }
     
     public void update(Poker objeto){
-        if(lista.contains(objeto)){
-            lista.remove(objeto);
-            lista.add(objeto);
+        if(listaOrdenada.contains(objeto)){
+            listaOrdenada.remove(objeto);
+            listaOrdenada.add(objeto);
         }
     }
     
-    public void delet(int codigo){
-        for (Poker poker : lista) {
+    public void delete(int codigo){
+        for (Poker poker : listaOrdenada) {
             if(poker.getCodigo() == codigo){
-                lista.remove(poker);
+                listaOrdenada.remove(poker);
+            break;
             }
+            
         }
     }
+
+    public void imprimir(){
+        System.out.println("Lista Ordenada por Nombre");
+        for (Poker poker : listaOrdenada) {
+            System.out.println(poker.getNombre());
+            
+        }
+    }
+    
 }
+
 

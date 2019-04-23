@@ -24,7 +24,7 @@ public class ControladorDeporte {
                 
     }
     
-    public Deporte read(Deporte objeto){
+    public Deporte read(int codigo){
         for (Deporte deporte : lista) {
             if(deporte.getCodigo() == codigo){
                 return deporte;
@@ -49,4 +49,5 @@ public class ControladorDeporte {
             
         }
     }
+
 }
